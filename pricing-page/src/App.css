@@ -1,0 +1,161 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pricing-title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* reduced spacing between boxes */
+}
+
+.pricing-box {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: 220px; /* slightly narrower */
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.price {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.pricing-box ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.pricing-box li {
+  margin: 5px 0;
+}
+
+.pricing-box button {
+  background-color: #0078d7;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pricing-box button:hover {
+  background-color: #005fa3;
+}
+.icon {
+  margin-bottom: 15px;
+}
+
+.description {
+  font-size: 0.95em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Reset some defaults */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+  background: #0078d7;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* <-- adds spacing between links */
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #ffeb3b;
+}
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0078d7, #00bcd4);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background: #ff9800;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #e68900;
+}
