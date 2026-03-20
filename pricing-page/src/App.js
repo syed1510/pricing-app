@@ -3,19 +3,23 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Home from "./Home";
-import Pricing from "./Pricing";
+//import Pricing from "./Pricing";
 import Login from "./Login";
 import Logout from './Logout';
 import ProtectedRoute from "./ProtectedRoute";
+import PricingPage from './PricingPage';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    setIsLoggedIn(!!token);
-  }, []);
+    // const token = localStorage.getItem("token");
+    // setIsLoggedIn(!!token);
+    localStorage.removeItem("token");
+    setIsLoggedIn(false);
 
+  }, []);
+//Comment to test Git Status
   // const handleLogout = () => {
   //   localStorage.removeItem("token");
   //   setIsLoggedIn(false);
@@ -38,7 +42,7 @@ function App() {
           path="/pricing"
           element={
             <ProtectedRoute>
-              <Pricing />
+              <PricingPage />
             </ProtectedRoute>
           }
         />

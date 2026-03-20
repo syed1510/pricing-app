@@ -13,7 +13,7 @@ const descriptionMap = {
   Enterprise: "Best for large organizations with advanced needs."
 };
 
-function Pricing() {
+function Pricing({onSubscribe}) {
   const [plans, setPlans] = useState([]);
 
   useEffect(() => {
@@ -50,7 +50,7 @@ function Pricing() {
             <ul>
               {plan.features.map(f => <li key={f}>{f}</li>)}
             </ul>
-            <button onClick={() => handleSubscribe(plan.name)}>Subscribe</button>
+            <button onClick={() => onSubscribe(plan.name)}>Subscribe</button>
           </div>
         ))}
       </div>
